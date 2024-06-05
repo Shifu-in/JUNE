@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
-        // Здесь можно добавить переход на главную страницу
-        window.location.href = "main.html"; // Или любой другой путь
-    }, 4000); // Переход через 4 секунды
+        window.location.href = "main.html"; // Переход на главную страницу через 4 секунды
+    }, 4000);
 });
