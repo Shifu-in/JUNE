@@ -226,8 +226,6 @@ body {
     margin-bottom: 1vh;
     user-select: none;
     padding: 1rem;
-    background: url('assets/images/фон иконок апгрейда 1.svg') no-repeat center center; /* Фон иконок апгрейда */
-    background-size: cover;
 }
 
 .upgrade-icon {
