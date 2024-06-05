@@ -88,12 +88,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getDefaultUpgrades() {
         return {
-            CLICK_MULTIPLIER: { displayName: "Click Multiplier", description: "Multiply per click", baseMultiplier: 1, level: 0, cost: 50, costIncrement: 1.15, maxLevel: 10 },
             AUTOCLICK: { displayName: "Auto-Click", description: "Automatically clicks", baseMultiplier: 1, level: 0, cost: 300, costIncrement: 1.15, maxLevel: 10 },
             VOYAGER: { displayName: "Voyager", description: "Automatically clicks more", baseMultiplier: 2, level: 0, cost: 500, costIncrement: 1.15, maxLevel: 10 },
             ROVER: { displayName: "Rover", description: "Multiply all resources", baseMultiplier: 5, level: 0, cost: 1000, costIncrement: 1.15, maxLevel: 10 },
-            DELIVERY: { displayName: "Delivery", description: "Multiply all resources", baseMultiplier: 10, level: 0, cost: 5000, costIncrement: 1.15, maxLevel: 10 },
-            NEW_PLANET: { displayName: "New Planet", description: "Double all resources to collect", baseMultiplier: 20, level: 0, cost: 10000, costIncrement: 1.15, maxLevel: 10 }
+            DELIVERY: { displayName: "Delivery", description: "Multiply all resources", baseMultiplier: 10, level: 0, cost: 5000, costIncrement: 1.15, maxLevel: 10 }
         };
     }
 
@@ -102,9 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
         for (const [key, upgrade] of Object.entries(upgrades)) {
             const upgradeDiv = document.createElement('div');
             upgradeDiv.className = `upgrade ${balance < upgrade.cost || upgrade.level >= upgrade.maxLevel ? "-disabled" : ''}`;
+            const iconSrc = `/mnt/data/апгрейд ${key === 'AUTOCLICK' ? 1 : key === 'VOYAGER' ? 2 : key === 'ROVER' ? 3 : key === 'DELIVERY' ? 4 : ''}.svg`;
             upgradeDiv.innerHTML = `
                 <div class="upgrade-icon">
-                    <img src="https://raw.githubusercontent.com/yourusername/yourrepository/main/Gem.png" alt="${upgrade.displayName}">
+                    <img src="${iconSrc}" alt="${upgrade.displayName}">
                 </div>
                 <div class="upgrade-info">
                     <h2>${upgrade.displayName}</h2>
