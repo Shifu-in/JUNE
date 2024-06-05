@@ -100,9 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
         for (const [key, upgrade] of Object.entries(upgrades)) {
             const upgradeDiv = document.createElement('div');
             upgradeDiv.className = `upgrade ${balance < upgrade.cost || upgrade.level >= upgrade.maxLevel ? "-disabled" : ''}`;
-            const iconSrc = `/mnt/data/апгрейд ${key === 'AUTOCLICK' ? 1 : key === 'VOYAGER' ? 2 : key === 'ROVER' ? 3 : key === 'DELIVERY' ? 4 : ''}.svg`;
+            const iconSrc = `assets/images/апгрейд ${key === 'AUTOCLICK' ? 1 : key === 'VOYAGER' ? 2 : key === 'ROVER' ? 3 : key === 'DELIVERY' ? 4}.svg`;
+            const backgroundSrc = `assets/images/фон иконок апгрейда ${key === 'AUTOCLICK' ? 1 : key === 'VOYAGER' ? 2 : key === 'ROVER' ? 3 : key === 'DELIVERY' ? 4}.svg`;
             upgradeDiv.innerHTML = `
-                <div class="upgrade-icon">
+                <div class="upgrade-icon" style="background: url(${backgroundSrc}) no-repeat center center; background-size: cover;">
                     <img src="${iconSrc}" alt="${upgrade.displayName}">
                 </div>
                 <div class="upgrade-info">
