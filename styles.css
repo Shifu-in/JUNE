@@ -1,5 +1,5 @@
 body {
-    background-color: #071521;
+    background-color: black; /* Устанавливаем базовый черный фон */
     width: 100%;
     height: 100vh;
     color: white;
@@ -17,6 +17,7 @@ body {
     padding: 0.7rem;
     display: flex;
     flex-direction: column;
+    background-color: transparent; /* Прозрачный фон для основного окна */
 }
 
 .top-bar {
@@ -195,6 +196,8 @@ body {
     box-sizing: border-box;
     padding: 20vh 5vh;
     align-items: center;
+    background: url('/mnt/data/Фон апгрейда.png') no-repeat center center; /* Фон апгрейда */
+    background-size: cover;
 }
 
 .store-content .info {
@@ -223,6 +226,8 @@ body {
     margin-bottom: 1vh;
     user-select: none;
     padding: 1rem;
+    background: url('/mnt/data/фон иконок апгрейда 1.svg') no-repeat center center; /* Обновленный фон иконок апгрейда */
+    background-size: cover;
 }
 
 .upgrade-icon {
