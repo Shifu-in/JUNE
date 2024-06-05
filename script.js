@@ -67,10 +67,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.navigateTo = function(page) {
         document.querySelectorAll('.game-window').forEach(div => div.style.display = 'none');
-        document.getElementById(`${page}-page`).style.display = 'flex';
+        document.getElementById(page).style.display = 'flex';
     }
 
-    navigateTo('main');
+    navigateTo('main-page');
 
     function updateBalance(newBalance) {
         balance = newBalance;
