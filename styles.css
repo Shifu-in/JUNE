@@ -196,7 +196,7 @@ body {
     box-sizing: border-box;
     padding: 20vh 5vh;
     align-items: center;
-    background: url('/mnt/data/Фон апгрейда.png') no-repeat center center; /* Фон апгрейда */
+    background: url('assets/images/Фон апгрейда.png') no-repeat center center; /* Фон апгрейда */
     background-size: cover;
 }
 
@@ -226,7 +226,7 @@ body {
     margin-bottom: 1vh;
     user-select: none;
     padding: 1rem;
-    background: url('/mnt/data/фон иконок апгрейда 1.svg') no-repeat center center; /* Обновленный фон иконок апгрейда */
+    background: url('assets/images/фон иконок апгрейда 1.svg') no-repeat center center; /* Фон иконок апгрейда */
     background-size: cover;
 }
 
